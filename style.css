@@ -1,0 +1,149 @@
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+  
+    overflow-x: hidden;
+   
+  }
+  .container1 {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    position: relative; /* To position the icon relative to the container */
+}
+
+/* Style for the input field */
+.item-input {
+    flex-grow: 1;
+    padding: 8px 30px 8px 8px; /* Adjust padding to make space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the plus icon */
+.plus-icon {
+    position: absolute;
+    right: 8px; /* Adjust the right position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #03080e;
+    cursor: pointer;
+}
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-panel,
+  .right-panel {
+    width: 45%;
+  }
+  
+  .left-panel {
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+  }
+  
+  .right-panel {
+    padding-left: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+   background-color: #ebedf0;
+    color: #0e0404;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /*button:hover {
+    background-color: #0056b3;
+  }*/
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .form-field {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  
+    
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    
+  }
+  
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: relative;
+    
+  }
+  
+  .form-field select {
+    height: 38px;
+  }
+  
+  .form-field button {
+    display: block;
+    position: absolute;
+    position:inherit;
+    width: 10%;
+    padding: 8px;
+    background-color: #f3e9ea;
+    color: #131010;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /*.form-field button:hover {
+    background-color: #c82333;
+  }*/
+  
+  .dragging {
+    opacity: 0.5;
+  }
+  
+  .over {
+    border: 2px dashed #007bff;
+  }
+  
+  
