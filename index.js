@@ -120,51 +120,11 @@ const formData = [
 
       if (fieldType === 'input' || fieldType === 'textarea') {
         const fieldValue = element.value.trim();
-
-        // Validate if field is empty
-        if (fieldValue === '') {
-          alert(` Label cannot be empty.`);
-          isValid = false;
-          break;
-        }
-
-        // Validate email format if it's an email input
-        if (fieldType === 'input' && element.type === 'email') {
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailPattern.test(fieldValue)) {
-            alert(`Please enter a valid email address for ${fieldData.label}.`);
-            isValid = false;
-            break;
-          }
-        }
-
-        // Validate minimum and maximum lengths
-        const minLength = element.minLength;
-        const maxLength = element.maxLength;
-
-        if (minLength && fieldValue.length < minLength) {
-          alert(`${fieldData.label} must be at least ${minLength} characters.`);
-          isValid = false;
-          break;
-        }
-
-        if (maxLength && fieldValue.length > maxLength) {
-          alert(`${fieldData.label} cannot exceed ${maxLength} characters.`);
-          isValid = false;
-          break;
-        }
-
+      
         fieldData.placeholder = element.getAttribute('placeholder');
         fieldData.value = fieldValue;
       } else if (fieldType === 'select') {
         const selectedOption = element.value;
-
-        // Validate if option is selected
-        if (selectedOption === '') {
-          alert(`Please select an option for ${fieldData.label}.`);
-          isValid = false;
-          break;
-        }
 
         fieldData.options = [];
         const options = element.querySelectorAll('option');
